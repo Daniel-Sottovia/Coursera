@@ -1,0 +1,15 @@
+Um programa de computador é:
+Contém conhecimento sobre o problema e sua solução, descritos na linguagem de programação;
+É uma ferramenta para solucionar o problema quando é executado;
+
+Software Livre:
+-O software pode e dever ser compartilhado;
+
+Definição
+Um programa é Software Livre se oferecer as 4 liberdades seguintes:
+-Liberdade para executar o programa;
+-Liberdade para estudar e modificar o programa;
+-Liberdade para redistribuir o programa;
+-Liberdade para melhorar e redistribuir as melhorias ao programa;
+
+-Várias linguagens de programação amplamente usadas, como Java, Ruby e Python, são Software Livre;
