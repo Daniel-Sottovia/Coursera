@@ -1,0 +1,149 @@
+5 simple statements:
+- Create the table
+- Insert data
+- Select data
+- Update data
+- Delete data
+
+drop table COUNTRY;
+create table COUNTRY (
+	ID int NOT NULL,
+	CCODE char(2),
+	NAME varchar(60),
+	PRIMARY KEY (ID)
+);
+
+SELECT Statement
+- Retrieve data from a relational database table
+- Define the use of a predicate
+- Identify the syntax of the SELECT statement using the WHERE clause
+- List the comparison operatores supported by a RDBMS 
+
+- After creating a table and inserting data into the table, we want to see
+the data
+- SELECT statement
+-- A Data Manipuation Language (DML) statement used to read and modify data
+
+- You can retrieve just the columns you want 
+- The order of the columns displayed always matches the order in the SELECT
+statement
+
+Restricting the Result Set: WHERE Clause
+- Restricts the result set
+- Always requires a Predicate:
+-- Evaluates to: True, False or Unknown
+-- Used in the search condition of the Where clause
+
+Now you can:
+- Retrieve data from a relational database table
+- Define the use of a predicate
+- Identify the syntax of the SELECT statement using the WHERE clause
+- List the comparison operators supported by a RDBMS
+
+select COLUMN1, COLUMN2, ... from TABLE1 ;
+
+select ID, NAME from COUNTRY ;
+
+select * from COUNTRY ;
+
+A cláusula WHERE pode ser adicionada à sua consulta para filtrar resultados ou obter
+linhas de dados específicas. Para recuperar dados para todas as linhas na tabela COUNTRY
+em que o ID é menor que 5:
+
+select * from COUNTRY where ID < 5 ;
+
+No caso de colunas baseadas em caracteres, os valores dos predicados na cláusula 'where'
+precisam ser colocados entre aspas simples. Para recuperar os dados do país com código de
+país 'CA', emitiríamos:
+
+select * from COUNTRY where CCODE = 'CA'
+
+COUNT() 
+- a built-in function that retrieves the number of rows matching the query criteria.
+
+Number of rows in a table:
+select COUNT(*) from tablename
+
+Rows in the MEDALS table where Country is Canada:
+select COUNT(COUNTRY) from MEDALS where COUNTRY='CANADA'
+
+DISTINCT
+- is used to remove duplicate values from a result set.
+
+Retrive unique values in a column:
+select DISTINCT columnname from tablename
+
+List of unique countries that received GOLD medals:
+select DISTINCT COUNTRY from MEDALS where MEDALTYPE = 'GOLD'
+
+LIMIT
+- is used for restricting the number of rows retrieved from the database.
+
+Retrieve just the first 10 rows in a table:
+select * from tablename LIMIT 10
+
+Retrieve 5 rows in the MEDALS table for a particular year:
+select * from MEDALS where YEAR = 2018 LIMIT 5
+
+INSET Statement
+- At the end of this video, you will be able to:
+-- Identify the syntax of the INSERT statement
+-- Explain two methods to add rows to a table
+
+Adding rows to a table
+- Create the table (CREATE TABLE statement)
+- Populated with table with data:
+-- INSERT statement
+--- a Dara Manipulation Language (DML) statement used to read and modify data
+
+INSERT INTO [TableName]
+<([ColumnName],...)>
+VALUES([Value],...)
+
+Ex:
+
+INSERT INTO AUTOR
+	(AUTHOR_ID,LASTNAME,FIRSTNAME,EMAIL,CITY,COUNTRY
+	)
+VALUES
+('A1','CHONG','RAUL','RFC@IBM.COM','TORONTO','CA'),
+('A2','AHUJA','RAV','RA@IBM.COM','TORONTO','CA')
+
+Now you can:
+- Identify the syntax of the INSERT statement
+- Explain two methods to add rows to a table
+
+UPDATE & DELETE Statements
+- At the end of this lesson, you will be able to:
+-- Identify the syntax of the UPDATE statement
+-- Identify the syntax of the DELETE statement
+-- Explain the importance of the WHERE clause in both the UPDATE and
+DELETE statements
+
+Altering rows of a table - UPDATE statement
+- After creating a table and inserting data into the table, we can alter the data
+-- UPDATE statement: A Data Manipulation Language (DML) statement used to read and 
+modify data
+
+UPDATE [TableName]
+SET [[ColumnName]=[Value]]
+<WHERE [Condition]>
+
+UPDATE AUTHOR
+SET	LASTNAME = KATTA
+	FIRSTNAME = LAKSHMI
+WHERE AUTHOR_ID = A2
+
+Deleting Rows from a table
+- Remove 1 or more rows from the table:
+-- DELETE statement
+--- A DML statement used to read and modify data
+
+DELETE FROM [TABLEName]
+<WHERE[Condition]>
+
+DELETE FROM AUTHOR
+WHERE AUTHOR_ID IN('A2','A3')
+
+- if no WHERE clause is used, all rows will be removed.
+

@@ -1,0 +1,14 @@
+SQL 
+- a language used for relational databases
+- query data
+
+Database
+- a repository of data
+- provides the functionality for adding, modifying and querying that data
+- data stored in tabular form is a relational database
+
+RDBMS
+- Relational database management system
+- a set of software tools that controls the data
+-- access, organization, and storage
+
